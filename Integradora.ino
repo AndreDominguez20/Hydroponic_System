@@ -279,9 +279,9 @@ void loop() {
   display3.print("ERROR");
   }
   //Heating plate control
-  if (temperature<=25){
+  if (temperature<=20){
     digitalWrite(heatingPlate,HIGH);
-  } else if (temperature>=30){
+  } else if (temperature>=25){
     digitalWrite(heatingPlate,LOW);
   }
 
@@ -324,4 +324,6 @@ void loop() {
       while (1);
     }
   }
+	delay(1000);
+		
 }
