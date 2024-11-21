@@ -225,11 +225,11 @@ void loop() {
   display1.print("ERROR");
   }
   
-  if (tdsValue<=800){
-    digitalWrite(tdsPump,HIGH);
-    delay(10000);
-    digitalWrite(tdsPump,LOW);
-  } 
+  if (tdsValue <= 800) {
+    digitalWrite(tdsPump, HIGH);
+  } else if (tdsValue >= 900) {
+  digitalWrite(tdsPump, LOW);
+  }
 
   // pH
   float phValue = getPHValue();
